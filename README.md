@@ -16,34 +16,21 @@
 ## 参数说明
 
 ```bash
-$ code.exe --help
-Usage of D:\files\GoGit\bin\code.exe:
+Sniffer --help
+Usage of Sniffer:
   -end int
         end holds the last page number to finish sniffer (default 1)
   -path string
-        path holds the path to store the pictures (default "../jiandan")
+        path holds the path to store the pictures (default "./images")
   -start int
         start holds the first page to start sniffer (default 1)
-
-```
-
-## 试用
-
-0、前提：需要是Windows系统
-
-1、在命令行环境下，进入Sniffer/exe目录
-
-2、运行
-
-```bash
-Sniffer.exe -start 1 -end 10
 ```
 
 ## 编译运行
 
 0、前提：需要安装了golang运行环境
 
-1、在命令行环境下，进入Sniffer/code目录
+1、在命令行环境下，进入Sniffer目录
 
 2、编译
 
@@ -53,24 +40,17 @@ go install
 
 3、运行
 
-3.1、Linux
-
 ```bash
-code -start 1 -end 10
+Sniffer -start 1 -end 10
 ```
 
-3.2、Windows
-
-```bash
-code.exe -start 1 -end 10
-```
 
 ## 输出结果
 
 程序运行成功后，命令行输出如下，并且会将抓取到的图片存储在指定文件夹下。如果未指定图片存储路径，默认会将图片存放在Sniffer/images目录下。
 
 ```bash
-$ code.exe -start 1 -end 2
+$ Sniffer -start 1 -end 2
 create storage directory:       ../images/
 download picture:       http://ww3.sinaimg.cn/large/7c8e8afbjw1dh9yimwp4xj.jpg
 success
